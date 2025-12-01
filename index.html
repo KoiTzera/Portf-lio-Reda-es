@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Koitz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <h1 class="logo">Portfólio</h1>
+            <ul class="menu">
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#redacoes">Redações</a></li>
+                <li><a href="#agradecimentos">Agradecimentos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" class="secao hero">
+        <div class="container">
+            <h2 class="titulo-principal">
+                Minha Jornada <br>
+                <span>nas Redações</span>
+            </h2>
+            <p class="descricao-principal">
+                Ao longo dessa jornada, cada redação representa um novo aprendizado, aprimorando criatividade,
+                argumentação, senso crítico e comunicação. Acompanhe minha evolução e desenvolvimento acadêmico.
+            </p>
+
+            <div class="cards">
+                <div class="card-mini">
+                    <i class="fa-solid fa-pen-nib icon-mini"></i>
+                    <div class="mini-text">
+                        <h4>15</h4>
+                        <p>Redações Únicas</p>
+                    </div>
+                </div>
+
+                <div class="card-mini">
+                    <i class="fa-solid fa-book icon-mini"></i>
+                    <div class="mini-text">
+                        <h4>12</h4>
+                        <p>Estudos Concluídos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="redacoes" class="secao composicoes">
+        <div class="container">
+            <h2 class="titulo-colecao">Minha Coleção</h2>
+            <p class="descricao-colecao">15 redações que representam minha evolução como escritor</p>
+
+            <div class="composition-grid">
+
+                <div class="composition-card">
+                    <div class="composition-header">
+                        <div class="composition-category">Reflexão</div>
+                        <div class="composition-number">1</div>
+                        <h3 class="composition-title">Quem sou eu no Mundo</h3>
+                        <p class="composition-theme">Pensamentos e autoconhecimento</p>
+                    </div>
+                    <div class="composition-body">
+                        <p class="composition-description">Reflexão sobre identidade e lugar no mundo contemporâneo</p>
+                        <div class="composition-meta">
+                            <span>Redação 1</span>
+                            <span>Reflexão</span>
+                        </div>
+                        <button class="composition-btn" onclick="abrirRedacao(0)">
+                            <i class="fas fa-book-open"></i>
+                            Ler Redação Completa
+                        </button>
+                    </div>
+                </div>
+
+                <div class="composition-card">
+                    <div class="composition-header">
+                        <div class="composition-category">Reflexão</div>
+                        <div class="composition-number">2</div>
+                        <h3 class="composition-title">Quem sou eu no Mundo</h3>
+                        <p class="composition-theme">Pensamentos e autoconhecimento</p>
+                    </div>
+                    <div class="composition-body">
+                        <p class="composition-description">Reflexão sobre identidade e lugar no mundo contemporâneo</p>
+                        <div class="composition-meta">
+                            <span>Redação 1</span>
+                            <span>Reflexão</span>
+                        </div>
+                        <button class="composition-btn" onclick="abrirRedacao(1)">
+                            <i class="fas fa-book-open"></i>
+                            Ler Redação Completa
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="agradecimentos" class="secao">
+        <div class="container">
+            <h2 class="titulo-secao">Agradecimentos</h2>
+
+            <div class="box-agradecimentos">
+
+                <div class="card-agradecimento">
+                    <h3>Gratidão pelo apoio</h3>
+                    <p>Obrigado por sempre caminhar ao meu lado e acreditar nas minhas conquistas.</p>
+                </div>
+
+                <div class="card-agradecimento">
+                    <h3>Agradecimento especial</h3>
+                    <p>Sou grato por cada lição, cada conselho e cada incentivo para seguir em frente.</p>
+                </div>
+
+                <div class="card-agradecimento">
+                    <h3>Mensagem de carinho</h3>
+                    <p>Seu carinho e presença tornaram esta trajetória ainda mais especial.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+
+    <!-- MODAL REDAÇÃO -->
+    <div class="modal fade" id="modalRedacao" tabindex="-1" aria-labelledby="modalRedacaoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modalRedacaoLabel">Título da Redação</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p id="modalRedacaoTexto" style="line-height: 1.8; font-size: 18px; color: #3b3b3b;">
+
+                    </p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SCRIPT EXTERNO -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
